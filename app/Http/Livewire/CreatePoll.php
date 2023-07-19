@@ -44,6 +44,8 @@ class CreatePoll extends Component
                 ->all()
             );
         $this->reset(['title', 'options']);
+
+        $this->emit('pollCreated');
         // $poll = Poll::create([
         //     'title' => $this->title
         // ]);
